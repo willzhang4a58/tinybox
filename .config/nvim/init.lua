@@ -16,6 +16,8 @@ require("lazy").setup({
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
+  "catppuccin/nvim",
+  "RRethy/vim-illuminate",
 })
 
 -- lsp
@@ -27,3 +29,8 @@ local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.pylsp.setup {}
+
+-- skin
+vim.opt.number = true
+vim.opt.cursorline = true
+vim.cmd.colorscheme "catppuccin-macchiato"
