@@ -40,6 +40,8 @@ vim.o.foldlevel = 99
 -- skin
 vim.opt.number = true
 vim.opt.cursorline = true
+vim.opt.colorcolumn = "101"
+vim.opt.mouse = ""
 vim.cmd.colorscheme "catppuccin-macchiato"
 require("ibl").setup()
 
