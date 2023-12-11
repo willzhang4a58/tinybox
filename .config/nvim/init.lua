@@ -19,7 +19,8 @@ require("lazy").setup({
   "catppuccin/nvim",
   "RRethy/vim-illuminate",
   "lukas-reineke/indent-blankline.nvim",
-  {"kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async"}
+  {"kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async"},
+  "lewis6991/gitsigns.nvim",
 })
 
 -- lsp
@@ -44,6 +45,7 @@ vim.opt.colorcolumn = "101"
 vim.opt.mouse = ""
 vim.cmd.colorscheme "catppuccin-macchiato"
 require("ibl").setup()
+require('gitsigns').setup()
 
 -- map
 --   normal_mode = n
