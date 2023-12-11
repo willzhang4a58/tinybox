@@ -21,6 +21,7 @@ require("lazy").setup({
   "lukas-reineke/indent-blankline.nvim",
   {"kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async"},
   "lewis6991/gitsigns.nvim",
+  "itchyny/lightline.vim",
 })
 
 -- lsp
