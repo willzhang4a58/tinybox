@@ -42,3 +42,17 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.cmd.colorscheme "catppuccin-macchiato"
 require("ibl").setup()
+
+-- map
+--   normal_mode = n
+--   insert_mode = i
+--   visual_mode = v
+--   visual_block_mode = x
+--   term_mode = t
+--   command_mode = c
+local keymap = vim.api.nvim_set_keymap
+vim.g.mapleader = ','
+keymap("n", "<Leader>te", ":tabedit <c-r>=expand('%:p:h')<cr>/", {noremap = true, silent = false})
+keymap("n", "<Leader>;", ":tabp<cr>", {noremap = true, silent = true})
+keymap("n", "<Leader>'", ":tabn<cr>", {noremap = true, silent = true})
+keymap("n", "<Leader>vs", ":vs <c-r>=expand('%:p:h')<cr>/", {noremap = true, silent = false})
