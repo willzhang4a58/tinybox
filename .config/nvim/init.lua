@@ -18,6 +18,7 @@ require("lazy").setup({
   "neovim/nvim-lspconfig",
   "catppuccin/nvim",
   "RRethy/vim-illuminate",
+  "lukas-reineke/indent-blankline.nvim",
 })
 
 -- lsp
@@ -29,8 +30,10 @@ local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.pylsp.setup {}
+vim.diagnostic.disable()
 
 -- skin
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.cmd.colorscheme "catppuccin-macchiato"
+require("ibl").setup()
