@@ -19,6 +19,7 @@ require("lazy").setup({
   "catppuccin/nvim",
   "RRethy/vim-illuminate",
   "lukas-reineke/indent-blankline.nvim",
+  {"kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async"}
 })
 
 -- lsp
@@ -31,6 +32,10 @@ lspconfig.lua_ls.setup {}
 lspconfig.clangd.setup {}
 lspconfig.pylsp.setup {}
 vim.diagnostic.disable()
+
+-- fold
+require('ufo').setup()
+vim.o.foldlevel = 99
 
 -- skin
 vim.opt.number = true
