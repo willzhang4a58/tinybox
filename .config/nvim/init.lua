@@ -44,6 +44,7 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "101"
 vim.opt.mouse = ""
+vim.o.termguicolors = true
 vim.cmd.colorscheme "catppuccin-macchiato"
 require("ibl").setup()
 require('gitsigns').setup()
