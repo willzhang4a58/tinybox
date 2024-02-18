@@ -23,6 +23,8 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
   "itchyny/lightline.vim",
   "folke/tokyonight.nvim",
+  {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = {'nvim-lua/plenary.nvim'}},
+  {'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
 })
 
 -- lsp
@@ -50,6 +52,12 @@ vim.cmd.colorscheme "tokyonight"
 require("ibl").setup()
 require('gitsigns').setup()
 
+-- tab
+vim.o.expandtab = true
+vim.o.smarttab = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+
 -- map
 --   normal_mode = n
 --   insert_mode = i
@@ -63,3 +71,12 @@ keymap("n", "<Leader>te", ":tabedit <c-r>=expand('%:p:h')<cr>/", {noremap = true
 keymap("n", "<Leader>;", ":tabp<cr>", {noremap = true, silent = true})
 keymap("n", "<Leader>'", ":tabn<cr>", {noremap = true, silent = true})
 keymap("n", "<Leader>vs", ":vs <c-r>=expand('%:p:h')<cr>/", {noremap = true, silent = false})
+
+-- telescope
+require('telescope').setup {}
+require('telescope').load_extension('fzf')
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
