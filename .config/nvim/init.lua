@@ -22,6 +22,7 @@ require("lazy").setup({
   {"kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async"},
   "lewis6991/gitsigns.nvim",
   "itchyny/lightline.vim",
+  "folke/tokyonight.nvim",
 })
 
 -- lsp
@@ -45,7 +46,7 @@ vim.opt.cursorline = true
 vim.opt.colorcolumn = "101"
 vim.opt.mouse = ""
 vim.o.termguicolors = true
-vim.cmd.colorscheme "catppuccin-macchiato"
+vim.cmd.colorscheme "tokyonight"
 require("ibl").setup()
 require('gitsigns').setup()
 
