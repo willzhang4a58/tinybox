@@ -48,7 +48,7 @@ vim.opt.cursorline = true
 vim.opt.colorcolumn = "101"
 vim.opt.mouse = ""
 vim.o.termguicolors = true
-vim.cmd.colorscheme "tokyonight"
+vim.cmd.colorscheme "tokyonight-moon"
 require("ibl").setup()
 require('gitsigns').setup()
 
@@ -71,6 +71,7 @@ keymap("n", "<Leader>te", ":tabedit <c-r>=expand('%:p:h')<cr>/", {noremap = true
 keymap("n", "<Leader>;", ":tabp<cr>", {noremap = true, silent = true})
 keymap("n", "<Leader>'", ":tabn<cr>", {noremap = true, silent = true})
 keymap("n", "<Leader>vs", ":vs <c-r>=expand('%:p:h')<cr>/", {noremap = true, silent = false})
+keymap("n", "<Leader><cr>", ":noh<cr>", {noremap = true, silent = true})
 
 -- telescope
 require('telescope').setup {}
