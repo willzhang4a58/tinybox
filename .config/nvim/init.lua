@@ -23,6 +23,7 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
   "itchyny/lightline.vim",
   "folke/tokyonight.nvim",
+  "navarasu/onedark.nvim",
   {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = {'nvim-lua/plenary.nvim'}},
   {'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
 })
@@ -48,7 +49,7 @@ vim.opt.cursorline = true
 vim.opt.colorcolumn = "101"
 vim.opt.mouse = ""
 vim.o.termguicolors = true
-vim.cmd.colorscheme "tokyonight-moon"
+vim.cmd.colorscheme "onedark"
 require("ibl").setup()
 require('gitsigns').setup()
 
