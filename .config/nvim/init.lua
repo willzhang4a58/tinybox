@@ -24,6 +24,7 @@ require("lazy").setup({
   "itchyny/lightline.vim",
   "folke/tokyonight.nvim",
   "navarasu/onedark.nvim",
+  "ethanholz/nvim-lastplace",
   {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = {'nvim-lua/plenary.nvim'}},
   {'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
 })
@@ -52,6 +53,7 @@ vim.o.termguicolors = true
 vim.cmd.colorscheme "onedark"
 require("ibl").setup()
 require('gitsigns').setup()
+require("nvim-lastplace").setup()
 
 -- tab
 vim.o.expandtab = true
