@@ -76,6 +76,12 @@ keymap("n", "<Leader>'", ":tabn<cr>", {noremap = true, silent = true})
 keymap("n", "<Leader>vs", ":vs <c-r>=expand('%:p:h')<cr>/", {noremap = true, silent = false})
 keymap("n", "<Leader><cr>", ":noh<cr>", {noremap = true, silent = true})
 keymap("n", "<Leader>fm", "<cmd>lua vim.lsp.buf.format()<cr>", {noremap = true, silent = true})
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+  pattern = {"*.h", "*.cc", "*.cpp", "*.cuh", "*.cu", "*.py"},
+  callback = function(ev)
+    vim.lsp.buf.format()
+  end
+})
 
 -- telescope
 require('telescope').setup {}
